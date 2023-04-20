@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="landing-page">
+    <LandingCom />
+  </div>
+  <div class="about-page">
+    <AboutCom />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import LandingCom from '@/components/LandingCom.vue';
+import AboutCom from '@/components/AboutCom.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    LandingCom,
+    AboutCom,
   }
 }
 </script>
+<style>
+.landing-page{
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.about-page{
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0,0, 0, 0.3) 0.3%, rgba(255, 255, 255, 1) 4%, rgba(255, 255, 255, 1));
+}
+</style>
